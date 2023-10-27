@@ -1,2 +1,9 @@
 import { Space } from "./Space";
-export default Space;
+import * as utils from "./utils";
+
+const Dharmas = {
+  Space,
+  ...utils,
+};
+
+export default Dharmas;
