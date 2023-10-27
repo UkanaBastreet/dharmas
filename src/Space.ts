@@ -1,5 +1,5 @@
 export class Space {
-  private stack = []
+  private stack = [];
   constructor(
     private canvas: HTMLCanvasElement,
     private ctx: CanvasRenderingContext2D,
@@ -15,5 +15,11 @@ export class Space {
   }
   clear() {
     this.ctx.clearRect(0, 0, this.width, this.height);
+  }
+  scale(x: number, y = x) {
+    this.ctx.scale(x, y);
+  }
+  translate(x: number, y = x) {
+    this.ctx.translate(x, y);
   }
 }

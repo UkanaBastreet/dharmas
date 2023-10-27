@@ -13,7 +13,7 @@ export function drawRound(
   ctx.fill();
   ctx.closePath();
 }
-export function getRandomCoordsBySizes(width: number, height: number) {
+export function getRandomCoords(width: number, height: number) {
   return {
     x: Math.floor(Math.random() * width),
     y: Math.floor(Math.random() * height),
@@ -39,8 +39,8 @@ export function drawFpc(
   ctx.closePath();
 }
 export function checkCrossLines(a: segment1, b: segment2) {
+  // with the support of Varya
   function getKOrB(a1: number, a2: number, b1: number, b2: number) {
-    // return Math.floor((a1 - a2) / (b1 - b2));
     return (a1 - a2) / (b1 - b2);
   }
 
