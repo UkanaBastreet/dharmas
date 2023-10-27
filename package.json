@@ -1,0 +1,25 @@
+{
+  "name": "dharmas",
+  "version": "1.0.1",
+  "description": "My Canvas Library",
+  "repository": "https://github.com/UkanaBastreet/dharmas.git",
+  "author": "Ukana.Bastreet <s.ppp@bk.ru>",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "types": "dist/types.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "parcel build",
+    "dev": "parcel watch",
+    "patch": "yarn build && npm version patch && npm publish",
+    "git-commit": "git add . && git commit -m \"some fixes\" && git push",
+    "full-patch": "yarn build && git add . && git commit -m \"some fixes\" && git push && npm version patch && npm publish"
+  },
+  "devDependencies": {
+    "@parcel/packager-ts": "2.10.1",
+    "@parcel/transformer-typescript-types": "2.10.1",
+    "parcel": "^2.10.1",
+    "typescript": ">=3.0.0"
+  }
+}
