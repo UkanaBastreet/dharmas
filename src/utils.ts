@@ -87,9 +87,3 @@ export function checkIsCoordsInArc(
 export function getHypotenuse(a: number, b: number): number {
   return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 }
-export function getRandomCoordsInArea(width: number, height: number) {
-  let x = width - Math.round(Math.random() * width * 2);
-  let y = height - Math.round(Math.random() * height * 2);
-
-  return { x, y };
-}
